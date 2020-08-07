@@ -12,7 +12,5 @@ namespace DTD.Sort.Net.Main
             ISort<T> sorter = factory.GetSort(sortType);
             return sorter.Sort(data, order);
         }
-
-
     }
 }
