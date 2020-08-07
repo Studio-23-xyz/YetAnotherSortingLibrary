@@ -3,6 +3,6 @@ namespace DTD.Sort.Net.Enums
 {
     public enum SortType
     {
-        Bubble,Selection
+        Quick,Bubble,Selection,Insertion,Counting,Merge
     }
 }

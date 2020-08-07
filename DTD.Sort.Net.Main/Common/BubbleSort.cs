@@ -2,7 +2,7 @@
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 
-namespace DTD.Sort.Net.Main.Sorts
+namespace DTD.Sort.Net.Main
 {
     internal class BubbleSort<T>: ISort<T> where T:IComparable<T>
     {

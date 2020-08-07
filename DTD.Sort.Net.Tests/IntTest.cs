@@ -1,3 +1,4 @@
+using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Main;
 using NUnit.Framework;
 
@@ -20,14 +21,15 @@ namespace DTD.Sort.Net.Tests
         [Test]
         public void Ascending()
         {
-            SortDotNet<int>.Sort(UnsortedArray);
+            
+            SortDotNet<int>.Sort(UnsortedArray,SortType.Bubble,SortOrder.Ascending);
             CollectionAssert.AreEqual(UnsortedArray, SortedArray);
         }
 
         [Test]
         public void Descending()
         {
-            SortDotNet<int>.Sort(UnsortedArray,order:Enums.SortOrder.Decending);
+            SortDotNet<int>.Sort(UnsortedArray,SortType.Bubble,SortOrder.Decending);
             CollectionAssert.AreEqual(UnsortedArray, SortedArrayDescending);
         }
 

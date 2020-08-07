@@ -9,6 +9,6 @@
     <ProjectReference Include="..\DTD.Sort.Net.Interfaces\DTD.Sort.Net.Interfaces.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Sorts\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 </Project>
