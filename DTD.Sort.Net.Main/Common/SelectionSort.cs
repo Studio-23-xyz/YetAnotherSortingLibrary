@@ -9,11 +9,9 @@ namespace DTD.Sort.Net.Main
 
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
-
-            int k;
             for (int i = 0; i < input.Length; i++)
             {
-                k = i;
+                var k = i;
                 for (int j = i + 1; j < input.Length; j++)
                 {
                     if (Compare(input[j],input[k],sortOrder))

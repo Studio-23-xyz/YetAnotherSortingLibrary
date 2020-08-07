@@ -11,14 +11,15 @@ namespace DTD.Sort.Net.Main
 
         public SortFactory()
         {
-            SortLibrary = new Dictionary<SortType, ISort<T>>();
+            SortLibrary = new Dictionary<SortType, ISort<T>>
+            {
+                {SortType.Quick, new QuickSort<T>()},
+                {SortType.Bubble, new BubbleSort<T>()},
+                {SortType.Selection, new SelectionSort<T>()},
+                {SortType.Insertion, new InsertionSort<T>()},
+                {SortType.Merge, new MergeSort<T>()}
+            };
 
-            SortLibrary.Add(SortType.Quick, new QuickSort<T>());
-            SortLibrary.Add(SortType.Bubble, new BubbleSort<T>());
-            SortLibrary.Add(SortType.Selection, new SelectionSort<T>());
-            SortLibrary.Add(SortType.Insertion, new InsertionSort<T>());
-            SortLibrary.Add(SortType.Counting, new CountingSort<T>());
-            SortLibrary.Add(SortType.Merge, new MergeSort<T>());
 
         }
 

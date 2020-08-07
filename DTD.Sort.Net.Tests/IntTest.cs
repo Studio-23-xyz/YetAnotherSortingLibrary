@@ -21,6 +21,7 @@ namespace DTD.Sort.Net.Tests
         [SetUp]
         public void Setup()
         {
+            
             UnsortedArray = new[] {1, 5, 6, 2, 4, 3};
             SortedArray = new[] {1, 2, 3, 4, 5, 6};
             SortedArrayDescending = new[] {6, 5, 4, 3, 2, 1};
