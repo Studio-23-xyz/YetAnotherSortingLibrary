@@ -2,6 +2,10 @@ Yet Another Sorting Library
 ================
 Just as the name suggests this is just another sorting library for .Net Core. 
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Warhammer4000/YetAnotherSortingLibrary.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Warhammer4000/YetAnotherSortingLibrary/alerts/)
+[![Language grade: C#](https://img.shields.io/lgtm/grade/csharp/g/Warhammer4000/YetAnotherSortingLibrary.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Warhammer4000/YetAnotherSortingLibrary/context:csharp)
+
+
 
 Available Algorithms
 ================
