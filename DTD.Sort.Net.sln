@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.Sort.Net.Main", "DTD.Sort.Net.Main\DTD.Sort.Net.Main.csproj", "{A6938710-3960-4B04-BF73-9FB5871AAF52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.Sort.Net.Interfaces", "DTD.Sort.Net.Interfaces\DTD.Sort.Net.Interfaces.csproj", "{2433F842-E0CB-4ADC-B19B-A31E045226C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.Sort.Net.Enums", "DTD.Sort.Net.Enums\DTD.Sort.Net.Enums.csproj", "{F2BD53D2-1D80-4EA3-8E72-2EE524A8E440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.Sort.Net.Tests", "DTD.Sort.Net.Tests\DTD.Sort.Net.Tests.csproj", "{F7189663-EAFC-4140-AD0F-DADC754C1D2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6938710-3960-4B04-BF73-9FB5871AAF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6938710-3960-4B04-BF73-9FB5871AAF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6938710-3960-4B04-BF73-9FB5871AAF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6938710-3960-4B04-BF73-9FB5871AAF52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2433F842-E0CB-4ADC-B19B-A31E045226C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2433F842-E0CB-4ADC-B19B-A31E045226C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2433F842-E0CB-4ADC-B19B-A31E045226C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2433F842-E0CB-4ADC-B19B-A31E045226C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BD53D2-1D80-4EA3-8E72-2EE524A8E440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BD53D2-1D80-4EA3-8E72-2EE524A8E440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BD53D2-1D80-4EA3-8E72-2EE524A8E440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BD53D2-1D80-4EA3-8E72-2EE524A8E440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7189663-EAFC-4140-AD0F-DADC754C1D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7189663-EAFC-4140-AD0F-DADC754C1D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7189663-EAFC-4140-AD0F-DADC754C1D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7189663-EAFC-4140-AD0F-DADC754C1D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
