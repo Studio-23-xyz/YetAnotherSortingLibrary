@@ -17,7 +17,8 @@ namespace DTD.Sort.Net.Main
                 {SortType.Bubble, new BubbleSort<T>()},
                 {SortType.Selection, new SelectionSort<T>()},
                 {SortType.Insertion, new InsertionSort<T>()},
-                {SortType.Merge, new MergeSort<T>()}
+                {SortType.Merge, new MergeSort<T>()},
+                {SortType.Cocktail, new CocktailSort<T>()}
             };
 
 
