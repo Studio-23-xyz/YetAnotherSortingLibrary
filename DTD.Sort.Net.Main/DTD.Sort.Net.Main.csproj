@@ -2,6 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>2TakarDeveloper</Authors>
+    <Company>2TakarDeveloper</Company>
+    <Product>Yet Another Sorting Library</Product>
+    <Description>Just as the name suggests this is just another sorting library for .Net Core.</Description>
+    <PackageProjectUrl>https://warhammer4000.github.io/YetAnotherSortingLibrary/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Warhammer4000/YetAnotherSortingLibrary</RepositoryUrl>
+    <RepositoryType>Open Source</RepositoryType>
+    <Copyright>Copyright (c) 2020, Tanimul Haque Khan</Copyright>
+    <PackageLicenseFile>LICENCE.MD</PackageLicenseFile>
+    <PackageTags>Sorting</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>DTD.Sort.Net</PackageId>
+    <SignAssembly>false</SignAssembly>
+    <PackageIcon>hqdefault_live.jpg</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,5 +25,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Tazim\Desktop\LICENCE.MD" Link="Resources\LICENCE.MD">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="C:\Users\Tazim\Downloads\hqdefault_live.jpg" Link="Resources\hqdefault_live.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
-﻿using System;
-using DTD.Sort.Net.Enums;
+﻿using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
+using System;
 
 namespace DTD.Sort.Net.Main
 {
@@ -9,40 +9,42 @@ namespace DTD.Sort.Net.Main
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
             var entries2 = new T[input.Length];
-            Sort(input, entries2, 0, input.Length - 1,sortOrder);
+            Sort(input, entries2, 0, input.Length - 1, sortOrder);
             return input;
         }
 
         #region Constants
-        private const Int32 mergesDefault = 6;
-        private const Int32 insertionLimitDefault = 12;
+        private const int mergesDefault = 6;
+        private const int insertionLimitDefault = 12;
         #endregion
 
         #region Properties
-        protected Int32[] Positions { get; set; }
 
-        private Int32 merges;
-        public Int32 Merges
+        private int[] Positions { get; set; }
+
+        private int _merges;
+
+        private int Merges
         {
-            get { return merges; }
+            get { return _merges; }
             set
             {
                 // A minimum of 2 merges are required
                 if (value > 1)
-                    merges = value;
+                    _merges = value;
                 else
                     throw new ArgumentOutOfRangeException();
 
-                if (Positions == null || Positions.Length != merges)
-                    Positions = new Int32[merges];
+                if (Positions == null || Positions.Length != _merges)
+                    Positions = new int[_merges];
             }
         }
 
-        public Int32 InsertionLimit { get; set; }
+        private int InsertionLimit { get; set; }
         #endregion
 
         #region Constructors
-        public MergeSort(Int32 merges, Int32 insertionLimit)
+        public MergeSort(int merges, int insertionLimit)
         {
             Merges = merges;
             InsertionLimit = insertionLimit;
@@ -58,14 +60,14 @@ namespace DTD.Sort.Net.Main
 
 
         // Top-Down K-way Merge Sort
-        private void Sort(T[] entries1, T[] entries2, Int32 first, Int32 last,SortOrder order)
+        private void Sort(T[] entries1, T[] entries2, int first, int last, SortOrder order)
         {
             var length = last + 1 - first;
             if (length < 2)
                 return;
             else if (length < InsertionLimit)
             {
-                new InsertionSort<T>().Sort(entries1,order);
+                new InsertionSort<T>().Sort(entries1, order);
                 return;
             }
 
@@ -74,7 +76,7 @@ namespace DTD.Sort.Net.Main
             for (var remaining = length; remaining > 0; remaining -= size, left += size)
             {
                 var right = left + Math.Min(remaining, size) - 1;
-                Sort(entries1, entries2, left, right,order);
+                Sort(entries1, entries2, left, right, order);
             }
 
             Merge(entries1, entries2, first, last);
@@ -84,7 +86,7 @@ namespace DTD.Sort.Net.Main
 
         #region Merge Methods
 
-        private void Merge(T[] entries1, T[] entries2, Int32 first, Int32 last)
+        private void Merge(T[] entries1, T[] entries2, int first, int last)
         {
             Array.Clear(Positions, 0, Merges);
             // This implementation has a quadratic time dependency on the number of merges
@@ -92,10 +94,10 @@ namespace DTD.Sort.Net.Main
                 entries2[index] = Remove(entries1, first, last);
         }
 
-        private T Remove(T[] entries, Int32 first, Int32 last)
+        private T Remove(T[] entries, int first, int last)
         {
             var entry = default(T);
-            var found = (Int32?)null;
+            var found = (int?)null;
             var length = last + 1 - first;
 
             var index = 0;
@@ -122,7 +124,7 @@ namespace DTD.Sort.Net.Main
         #endregion
 
         #region Math Methods
-        private static Int32 ceiling(Int32 numerator, Int32 denominator)
+        private static int ceiling(int numerator, int denominator)
         {
             return (numerator + denominator - 1) / denominator;
         }

@@ -7,7 +7,7 @@ namespace DTD.Sort.Net.Main
 {
     internal class SortFactory<T> where T:IComparable<T>
     {
-        public Dictionary<SortType, ISort<T>> SortLibrary;
+        public readonly Dictionary<SortType, ISort<T>> SortLibrary;
 
         public SortFactory()
         {
