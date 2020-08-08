@@ -11,12 +11,13 @@
     <RepositoryUrl>https://github.com/Warhammer4000/YetAnotherSortingLibrary</RepositoryUrl>
     <RepositoryType>Open Source</RepositoryType>
     <Copyright>Copyright (c) 2020, Tanimul Haque Khan</Copyright>
-    <PackageLicenseFile>LICENCE.MD</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageTags>Sorting</PackageTags>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageId>DTD.Sort.Net</PackageId>
     <SignAssembly>false</SignAssembly>
-    <PackageIcon>hqdefault_live.jpg</PackageIcon>
+    <PackageIcon>Icon.jpg</PackageIcon>
+    <PackageLicenseExpression></PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,11 +29,11 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\Tazim\Desktop\LICENCE.MD" Link="Resources\LICENCE.MD">
+    <None Include="..\Icon.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="C:\Users\Tazim\Downloads\hqdefault_live.jpg" Link="Resources\hqdefault_live.jpg">
+    <None Include="..\LICENSE" Link="Resources\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
