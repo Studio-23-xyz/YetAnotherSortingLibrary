@@ -18,6 +18,8 @@
     <SignAssembly>false</SignAssembly>
     <PackageIcon>Icon.jpg</PackageIcon>
     <PackageLicenseExpression></PackageLicenseExpression>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
