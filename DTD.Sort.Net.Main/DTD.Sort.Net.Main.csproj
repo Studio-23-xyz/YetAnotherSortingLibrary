@@ -13,7 +13,7 @@
     <Copyright>Copyright (c) 2020, Tanimul Haque Khan</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageTags>Sorting</PackageTags>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>DTD.Sort.Net</PackageId>
     <SignAssembly>false</SignAssembly>
     <PackageIcon>Icon.jpg</PackageIcon>
