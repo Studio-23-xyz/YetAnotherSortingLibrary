@@ -27,8 +27,35 @@ Available Algorithms
 
 ```
 
+## Real Use Case
 
+Implement IComparable<T> Interface to your model class
 
+```c#
+
+public class Product:IComparable<Product>
+    {
+        public string Id;
+        public string Name;
+        public float Cost;
+        public float Price;
+
+        public int CompareTo(Product other)
+        {
+            if (Cost > other.Cost) return 1;
+            if (Cost < other.Cost) return -1;
+            return 0;
+        }
+    }
+
+```
+Use it just like you would for Base Types
+
+```c#
+
+ SortDotNet<Product>.Sort(UnsortedArray, SortType.Bubble, SortOrder.Decending);
+
+```
 
 
 Implementation Credits : https://rosettacode.org/wiki/Category:Sorting_Algorithms

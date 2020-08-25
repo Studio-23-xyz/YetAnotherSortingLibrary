@@ -19,6 +19,8 @@
     <PackageIcon>Icon.jpg</PackageIcon>
     <PackageLicenseExpression></PackageLicenseExpression>
     <Version>1.0.0</Version>
+    <AssemblyName>DTD.Sort.Net.Main</AssemblyName>
+    <RootNamespace>DTD.Sort.Net.Main</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
+    <Folder Include="Properties\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>

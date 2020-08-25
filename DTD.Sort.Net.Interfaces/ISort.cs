@@ -5,6 +5,6 @@ namespace DTD.Sort.Net.Interfaces
 {
     public interface ISort<T> where T:IComparable<T>
     {
-        public T[] Sort(T[] input, SortOrder sortOrder=SortOrder.Default);
+         T[] Sort(T[] input, SortOrder sortOrder=SortOrder.Default);
     }
 }
