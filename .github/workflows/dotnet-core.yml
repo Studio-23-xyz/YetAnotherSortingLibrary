@@ -20,7 +20,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Add Nuget Source
-      run: nuget source Add -Source "https://nuget.pkg.github.com/Warhammer4000/index.json" -UserName Warhammer4000 -Password ${{ secrets.TOKEN_GITHUB }}
+      run:  dotnet nuget add source https://nuget.pkg.github.com/Warhammer4000/index.json -n github -u Warhammer4000 -p ${{ secrets.TOKEN_GITHUB }}
     - name: Build
       run: dotnet pack --configuration Release --no-restore
     - name: Test
