@@ -49,13 +49,13 @@ jobs:
         run: dotnet test -c Release
       - name: Pack
         if: matrix.os == 'ubuntu-latest'
-        run: dotnet pack -v normal -c Release -p:PackageVersion=$VERSION -o ./nupkg
+        run: dotnet pack -v normal -c Release -p:PackageVersion=$VERSION 
       - name: Upload Artifact
         if: matrix.os == 'ubuntu-latest'
         uses: actions/upload-artifact@v2
         with:
           name: nupkg
-          path: ./nupkg/*.nupkg
+          path: /home/runner/work/${{ env.PROJECT_NAME }}/${{ env.PROJECT_NAME }}/${{ env.CSProject }}/bin/Release/*.nupkg
   prerelease:
     needs: build
     if: github.ref == 'refs/heads/develop'
