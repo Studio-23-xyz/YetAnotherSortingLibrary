@@ -19,20 +19,17 @@ jobs:
         dotnet-version: 3.1.301
     - name: Install dependencies
       run: dotnet restore
+    - name: Add Nuget Source
+      run: nuget source Add -Source "https://nuget.pkg.github.com/Warhammer4000/index.json" -UserName Warhammer4000 -Password ${{ secrets.TOKEN_GITHUB }}
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet pack --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Publish GitHub
+      run: dotnet nuget push "bin/Release/*.nupkg" --source "github"
     - name: Publish Nuget
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
           PROJECT_FILE_PATH: DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-    - name: Publish Github Packages   
-    - uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
-      with:
-        nupkg-path: './artifacts/*.nupkg'
-        repo-owner: 'Warhammer4000'
-        gh-user: 'Warhammer4000'
-        token: ${{ secrets.TOKEN_GITHUB }}
        
