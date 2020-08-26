@@ -28,3 +28,11 @@ jobs:
       with:
           PROJECT_FILE_PATH: DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+    - name: Publish Github Packages   
+    - uses: tanaka-takayoshi/nuget-publish-to-github-packages-action@v2.1
+      with:
+        nupkg-path:  './artifacts/*.nupkg'
+        repo-owner:  'Warhammer4000'
+        gh-user:  'Warhammer4000'
+        token:  ${{ secrets.TOKEN_GITHUB }}
+       
