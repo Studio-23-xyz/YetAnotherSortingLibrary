@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nupkg
-          path: ./${{ env.PROJECT_NAME }}/${{ env.PROJECT_NAME }}/${{ env.CSProject }}/bin/Release/*.nupkg
+          path: ./home/runner/work/${{ env.PROJECT_NAME }}/${{ env.PROJECT_NAME }}/${{ env.CSProject }}/bin/Release/*.nupkg
   prerelease:
     needs: build
     if: github.ref == 'refs/heads/develop'
