@@ -12,7 +12,8 @@ env:
   DOTNET_CLI_TELEMETRY_OPTOUT: true
   # Project name to pack and publish
   PROJECT_NAME: YetAnotherSortingLibrary
-  # GitHub Packages Feed settings
+  CSProject: DTD.Sort.Net.Main
+ # GitHub Packages Feed settings
   GITHUB_FEED: https://nuget.pkg.github.com/Warhammer4000/
   GITHUB_USER: Warhammer4000
   GITHUB_TOKEN: ${{ secrets.TOKEN_GitHub }}
@@ -46,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nupkg
-          path: ./src/${{ env.PROJECT_NAME }}/bin/Release/*.nupkg
+          path: ./${{ env.PROJECT_NAME }}/${{ env.PROJECT_NAME }}/${{ env.CSProject }}/bin/Release/*.nupkg
   prerelease:
     needs: build
     if: github.ref == 'refs/heads/develop'
