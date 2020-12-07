@@ -18,6 +18,9 @@ Available Algorithms
 | Quick Sort| ✔ | Recursive
 | Selection Sort| ✔ | 
 | Cocktail Sort| ✔ | 
+| Shell Sort| ✔ | 
+| Heap Sort| ✔ | 
+| Gnome Sort| ✔ | 
 
 
 ## How to use
