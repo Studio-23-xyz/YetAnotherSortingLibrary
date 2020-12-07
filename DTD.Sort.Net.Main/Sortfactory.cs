@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 
+
 namespace DTD.Sort.Net.Main
 {
     internal class SortFactory<T> where T:IComparable<T>
@@ -18,7 +19,13 @@ namespace DTD.Sort.Net.Main
                 {SortType.Selection, new SelectionSort<T>()},
                 {SortType.Insertion, new InsertionSort<T>()},
                 {SortType.Merge, new MergeSort<T>()},
-                {SortType.Cocktail, new CocktailSort<T>()}
+                {SortType.Cocktail, new CocktailSort<T>()},
+                {SortType.Shell, new  ShellSort<T>()},
+                {SortType.Heap, new HeapSort<T>()},
+                {SortType.Genome,new GnomeSort<T>()}
+                
+
+
             };
 
 

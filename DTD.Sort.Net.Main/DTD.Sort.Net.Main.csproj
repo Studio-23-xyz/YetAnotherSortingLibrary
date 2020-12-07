@@ -28,7 +28,6 @@
     <ProjectReference Include="..\DTD.Sort.Net.Interfaces\DTD.Sort.Net.Interfaces.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="Properties\" />
     <Folder Include="Resources\" />
   </ItemGroup>
