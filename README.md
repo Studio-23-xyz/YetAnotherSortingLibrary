@@ -62,3 +62,6 @@ Use it just like you would for Base Types
 
 
 Implementation Credits : https://rosettacode.org/wiki/Category:Sorting_Algorithms
+
+Sonarcube wip
+ 
