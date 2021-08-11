@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
+using DTD.Sort.Net.Main.Uncommons;
 
 
 namespace DTD.Sort.Net.Main
@@ -22,8 +23,8 @@ namespace DTD.Sort.Net.Main
                 {SortType.Cocktail, new CocktailSort<T>()},
                 {SortType.Shell, new  ShellSort<T>()},
                 {SortType.Heap, new HeapSort<T>()},
-                {SortType.Genome,new GnomeSort<T>()}
-                
+                {SortType.Genome,new GnomeSort<T>()},
+                {SortType.Pancake,new PancakeSort<T>()}
 
 
             };
