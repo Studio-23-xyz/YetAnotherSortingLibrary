@@ -1,7 +1,5 @@
 name: .NET Core
 on:
-  push:
-  pull_request:
   release:
     types:
       - published
