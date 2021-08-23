@@ -2,7 +2,7 @@ name: Raptor Nuget Packages
   
 on: 
    release:
-    types: [published, created, edited]
+    types: [published]
 jobs:
   build:
     runs-on: ubuntu-latest
