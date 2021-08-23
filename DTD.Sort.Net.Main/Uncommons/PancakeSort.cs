@@ -48,7 +48,7 @@ namespace DTD.Sort.Net.Main.Uncommons
             return order == SortOrder.Decending ? difference < 0 : difference > 0;
         }
 
-        private void Flip<T>(T[] list, int length, int num)
+        private void Flip(T[] list, int length, int num)
         {
             for (int i = 0; i < --num; i++)
             {
