@@ -22,6 +22,6 @@ jobs:
     - name: Publish DTD.Sort.Net
       uses: drusellers/publish-nuget@master
       with:
-          PROJECT_FILE_PATH: ./DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          project-file-path: ./DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj
+          nuget-key: ${{secrets.NUGET_API_KEY}}
           version: ${{ steps.get_version.outputs.version-without-v }}
