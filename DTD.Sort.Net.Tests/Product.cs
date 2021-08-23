@@ -9,7 +9,7 @@ namespace DTD.Sort.Net.Tests
         public string Id;
         public string Name;
         public float Cost;
-        public float Price;
+        public float Price ;
 
 
 

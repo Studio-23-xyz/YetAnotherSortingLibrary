@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>2TakarDeveloper</Authors>
     <Company>2TakarDeveloper</Company>
     <Product>Yet Another Sorting Library</Product>
-    <Description>Just as the name suggests this is just another sorting library for .Net Core.</Description>
+    <Description>Just as the name suggests this is just another sorting library for .Net</Description>
     <PackageProjectUrl>https://warhammer4000.github.io/YetAnotherSortingLibrary/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Warhammer4000/YetAnotherSortingLibrary</RepositoryUrl>
     <RepositoryType>Open Source</RepositoryType>
