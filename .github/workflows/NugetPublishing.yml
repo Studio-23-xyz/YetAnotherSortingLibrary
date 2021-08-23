@@ -1,8 +1,8 @@
 name: Publish Packages
 
 on:
-  push:
-    branches: [ master ]
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -16,6 +16,9 @@ jobs:
         dotnet-version: 5.0.x
     - name: Install dependencies
       run: dotnet restore
+    - name: Get Version from Tag
+      id: get_version
+      uses: battila7/get-version-action@v2
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Publish DTD.Sort.Net
@@ -23,3 +26,4 @@ jobs:
       with:
           PROJECT_FILE_PATH: ./DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          VERSION_STATIC: ${{ steps.get_version.outputs.version-without-v }}
