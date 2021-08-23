@@ -21,6 +21,7 @@ Available Algorithms
 | Shell Sort| ✔ | 
 | Heap Sort| ✔ | 
 | Gnome Sort| ✔ | 
+| Pancake Sort| ✔ | 
 
 
 ## How to use
