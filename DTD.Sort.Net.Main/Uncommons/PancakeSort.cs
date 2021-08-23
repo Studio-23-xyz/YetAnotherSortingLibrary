@@ -4,7 +4,7 @@ using DTD.Sort.Net.Interfaces;
 
 namespace DTD.Sort.Net.Main.Uncommons
 {
-    public class PancakeSort<T> : ISort<T> where T : IComparable<T>
+    internal class PancakeSort<T> : ISort<T> where T : IComparable<T>
     {
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
