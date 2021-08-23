@@ -20,7 +20,13 @@ jobs:
       run: dotnet test --configuration Release /p:Version=${{ steps.get_version.outputs.version-without-v }} --no-build
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${{ steps.get_version.outputs.version-without-v }} 
-    - name: Push with dotnet
-      run: dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+    #- name: Push with dotnet
+     # run: dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+    - name: publish nuget package
+      uses: dansiegel/publish-nuget@2
+      with:
+        filename: '*.nupkg'
+        apiKey: ${{ secrets.NUGET_API_KEY }}
+
 
   
