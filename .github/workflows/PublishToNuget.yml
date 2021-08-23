@@ -19,7 +19,7 @@ jobs:
       
     - run: dotnet build
     - name: Create the package
-      run: dotnet pack --configuration Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }}
+      run: dotnet pack --configuration Release
 
     - name: Publish the package to nuget.org
       run: dotnet nuget push */bin/Release/*.nupkg -k $NUGET_AUTH_TOKEN -s https://api.nuget.org/v3/index.json
