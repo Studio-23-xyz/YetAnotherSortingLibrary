@@ -14,12 +14,12 @@ jobs:
         dotnet-version: '5.0.x' # SDK Version to use.
     
     - name: Get tag
-      id: tag
-      uses: dawidd6/action-get-tag@v1    
+      id: get_version
+      uses: battila7/get-version-action@v2
       
     - run: dotnet build
     - name: Create the package
-      run: dotnet pack --configuration Release -p:PackageVersion=${{steps.tag.outputs.tag}}
+      run: dotnet pack --configuration Release -p:PackageVersion=${{ steps.get_version.outputs.version-without-v }}
 
     - name: Publish the package to nuget.org
       run: dotnet nuget push */bin/Release/*.nupkg -k $NUGET_AUTH_TOKEN -s https://api.nuget.org/v3/index.json
