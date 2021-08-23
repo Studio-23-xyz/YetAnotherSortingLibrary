@@ -20,7 +20,7 @@ jobs:
       id: get_version
       uses: battila7/get-version-action@v2
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release /p:Version=${{ steps.get_version.outputs.version-without-v }}
     - name: Publish DTD.Sort.Net
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
