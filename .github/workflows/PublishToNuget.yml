@@ -2,7 +2,9 @@ name: Raptor Nuget Packages
   
 on: 
    push: { branches: [master] } 
-  
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS : true
+
 jobs:
   build:
   
