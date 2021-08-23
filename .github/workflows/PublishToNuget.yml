@@ -1,27 +1,36 @@
-name: publish to nuget
-on:
-   release:
-    types:
-      - published
+name: Raptor Nuget Packages
+  
+on: 
+   push: { branches: [main] } 
+  
 jobs:
-  publish:
-    name: build, pack & publish
+  build:
+  
     runs-on: ubuntu-latest
+      
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1
+    - name: Fetch all history for all tags and branches
+      run: git fetch --prune --unshallow
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9
       with:
-        dotnet-version: '5.0.x' # SDK Version to use.
-    
-    - name: Get tag
-      id: get_version
-      uses: battila7/get-version-action@v2
-      
-    - run: dotnet build
-    - name: Create the package
-      run: dotnet pack --configuration Release
-
-    - name: Publish the package to nuget.org
-      run: dotnet nuget push */bin/Release/*.nupkg -k $NUGET_AUTH_TOKEN -s https://api.nuget.org/v3/index.json
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.NUGET_TOKEN }}
+          versionSpec: '5.1.x'
+    - name: Use GitVersion
+      id: gitversion # step id used as reference for output values
+      uses: gittools/actions/gitversion/execute@v0.9
+    - run: |
+        echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
+        echo "NuGetPreReleaseTagV2: ${{ steps.gitversion.outputs.CommitsSinceVersionSourcePadded }}"
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+    - name: Test with dotnet
+      run: dotnet test
+    - name: Pack with dotnet
+      run: dotnet pack ./DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj --output nuget-packages --configuration Release -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }}-${{ steps.gitversion.outputs.CommitsSinceVersionSourcePadded }} 
+    - name: Push with dotnet
+      run: dotnet nuget push nuget-packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
