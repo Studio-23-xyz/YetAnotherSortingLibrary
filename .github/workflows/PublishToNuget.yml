@@ -9,13 +9,17 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Get Version from Tag
+      id: get_version
+      uses: battila7/get-version-action@v2
+      
     - name: Build
-      run: dotnet build --configuration Release /p:Version=1.0.2
+      run: dotnet build --configuration Release /p:Version=${{ steps.get_version.outputs.version-without-v }}
     - name: Test
-      run: dotnet test --configuration Release /p:Version=1.0.2 --no-build
+      run: dotnet test --configuration Release /p:Version=${{ steps.get_version.outputs.version-without-v }} --no-build
     - name: Pack
-      run: dotnet pack --configuration Release /p:Version=1.0.2 --no-build --output .
-    - name: Push
-      run: dotnet nuget push NuGet.Workflow.1.0.2.nupkg --source https://nuget.pkg.github.com/Warhammer4000/index.json --api-key ${TOKEN_GITHUB}
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+      run: dotnet pack --configuration Release /p:Version=${{ steps.get_version.outputs.version-without-v }} --no-build --output
+    - name: Push with dotnet
+      run: dotnet nuget push nuget-packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+
+  
