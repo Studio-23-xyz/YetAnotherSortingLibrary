@@ -1,7 +1,8 @@
 name: Raptor Nuget Packages
   
 on: 
-   push: { branches: [master] } 
+   release:
+    types: [published, created, edited]
 jobs:
   build:
     runs-on: ubuntu-latest
