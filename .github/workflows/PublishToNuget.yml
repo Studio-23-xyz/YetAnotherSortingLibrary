@@ -1,4 +1,4 @@
-name: Raptor Nuget Packages
+name: Nuget Publish
   
 on: 
    release:
@@ -23,7 +23,7 @@ jobs:
     #- name: Push with dotnet
      # run: dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
     - name: publish nuget package
-      uses: dansiegel/publish-nuget@2
+      uses: dansiegel/publish-nuget@v1.01
       with:
         filename: '*.nupkg'
         apiKey: ${{ secrets.NUGET_API_KEY }}
