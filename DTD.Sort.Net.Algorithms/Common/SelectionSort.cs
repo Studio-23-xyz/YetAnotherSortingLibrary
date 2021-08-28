@@ -2,10 +2,11 @@
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 
-namespace DTD.Sort.Net.Main
+namespace DTD.Sort.Net.Algorithms
 {
-    public class SelectionSort<T> :ISort<T> where T : IComparable<T> 
+    internal class SelectionSort<T> :ISort<T> where T : IComparable<T>
     {
+        public SortType Type => SortType.Selection;
 
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {

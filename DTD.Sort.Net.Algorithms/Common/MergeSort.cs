@@ -2,10 +2,12 @@
 using DTD.Sort.Net.Interfaces;
 using System;
 
-namespace DTD.Sort.Net.Main
+namespace DTD.Sort.Net.Algorithms
 {
-    public class MergeSort<T> : ISort<T> where T : IComparable<T>
+    internal class MergeSort<T> : ISort<T> where T : IComparable<T>
     {
+        public SortType Type => SortType.Merge;
+
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
             var entries2 = new T[input.Length];

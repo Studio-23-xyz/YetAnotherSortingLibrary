@@ -1,13 +1,15 @@
 ﻿using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 using System;
-using System.Diagnostics.CodeAnalysis;
 
-namespace DTD.Sort.Net.Main
+
+namespace DTD.Sort.Net.Algorithms
 {
 
     internal class GnomeSort<T> : ISort<T> where T : IComparable<T>
     {
+        public SortType Type => SortType.Gnome;
+
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
             int first = 1;

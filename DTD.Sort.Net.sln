@@ -1,13 +1,16 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.Sort.Net.Main", "DTD.Sort.Net.Main\DTD.Sort.Net.Main.csproj", "{A6938710-3960-4B04-BF73-9FB5871AAF52}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTD.Sort.Net.Main", "DTD.Sort.Net.Main\DTD.Sort.Net.Main.csproj", "{A6938710-3960-4B04-BF73-9FB5871AAF52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.Sort.Net.Interfaces", "DTD.Sort.Net.Interfaces\DTD.Sort.Net.Interfaces.csproj", "{2433F842-E0CB-4ADC-B19B-A31E045226C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTD.Sort.Net.Interfaces", "DTD.Sort.Net.Interfaces\DTD.Sort.Net.Interfaces.csproj", "{2433F842-E0CB-4ADC-B19B-A31E045226C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.Sort.Net.Enums", "DTD.Sort.Net.Enums\DTD.Sort.Net.Enums.csproj", "{F2BD53D2-1D80-4EA3-8E72-2EE524A8E440}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTD.Sort.Net.Enums", "DTD.Sort.Net.Enums\DTD.Sort.Net.Enums.csproj", "{F2BD53D2-1D80-4EA3-8E72-2EE524A8E440}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.Sort.Net.Tests", "DTD.Sort.Net.Tests\DTD.Sort.Net.Tests.csproj", "{F7189663-EAFC-4140-AD0F-DADC754C1D2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTD.Sort.Net.Tests", "DTD.Sort.Net.Tests\DTD.Sort.Net.Tests.csproj", "{F7189663-EAFC-4140-AD0F-DADC754C1D2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTD.Sort.Net.Algorithms", "DTD.Sort.Net.Algorithms\DTD.Sort.Net.Algorithms.csproj", "{0D1029A4-1B10-4804-B6C3-B4EC2BE01E48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,5 +34,15 @@ Global
 		{F7189663-EAFC-4140-AD0F-DADC754C1D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7189663-EAFC-4140-AD0F-DADC754C1D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7189663-EAFC-4140-AD0F-DADC754C1D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1029A4-1B10-4804-B6C3-B4EC2BE01E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1029A4-1B10-4804-B6C3-B4EC2BE01E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1029A4-1B10-4804-B6C3-B4EC2BE01E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1029A4-1B10-4804-B6C3-B4EC2BE01E48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10AC28A3-A893-411A-B219-F44F4B7FCAF7}
 	EndGlobalSection
 EndGlobal
