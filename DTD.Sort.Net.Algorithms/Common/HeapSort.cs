@@ -1,13 +1,14 @@
 ﻿using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace DTD.Sort.Net.Main
+
+namespace DTD.Sort.Net.Algorithms
 {
     internal class HeapSort<T> : ISort<T> where T : IComparable<T>
     {
+        public SortType Type => SortType.Heap;
+
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
             return Sort(input, 0, input.Length,sortOrder);

@@ -2,10 +2,11 @@
 using DTD.Sort.Net.Interfaces;
 using System;
 
-namespace DTD.Sort.Net.Main
+namespace DTD.Sort.Net.Algorithms
 {
     internal class ShellSort<T> : ISort<T> where T : IComparable<T>
     {
+        public SortType Type => SortType.Shell;
 
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {

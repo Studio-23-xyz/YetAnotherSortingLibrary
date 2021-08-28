@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 using DTD.Sort.Net.Main;
@@ -15,7 +14,7 @@ namespace DTD.Sort.Net.Tests
 
 
         private static IEnumerable<ISort<Product>> TestAssistant =>
-            new TestAssistant<Product>().GetSortlibrary().Values.ToList();
+            new SortFactory<Product>().SortLibrary;
 
 
         [SetUp]

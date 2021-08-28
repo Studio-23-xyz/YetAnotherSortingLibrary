@@ -3,10 +3,12 @@ using System.Diagnostics;
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 
-namespace DTD.Sort.Net.Main
+namespace DTD.Sort.Net.Algorithms
 {
-    public class QuickSort<T> : ISort<T> where T : IComparable<T>
+    internal class QuickSort<T> : ISort<T> where T : IComparable<T>
     {
+        public SortType Type => SortType.Quick;
+
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
             Sort(input, 0, input.Length - 1,sortOrder);

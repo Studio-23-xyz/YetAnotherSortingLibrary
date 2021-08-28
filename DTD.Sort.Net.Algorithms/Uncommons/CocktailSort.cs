@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 
-namespace DTD.Sort.Net.Main
+namespace DTD.Sort.Net.Algorithms
 {
     internal class CocktailSort<T>:ISort<T> where  T:IComparable<T>
     {
+        public SortType Type => SortType.Cocktail;
+
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
             bool swapped;

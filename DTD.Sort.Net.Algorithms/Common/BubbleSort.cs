@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 
-namespace DTD.Sort.Net.Main
+[assembly: InternalsVisibleTo("DTD.Sort.Net.Main")]
+namespace DTD.Sort.Net.Algorithms
 {
     internal class BubbleSort<T>: ISort<T> where T:IComparable<T>
     {
-       
+        public SortType Type => SortType.Bubble;
+
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
             for (int i = 0; i < input.Length; i++)

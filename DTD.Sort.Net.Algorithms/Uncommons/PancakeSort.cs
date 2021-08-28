@@ -2,10 +2,12 @@
 using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
 
-namespace DTD.Sort.Net.Main.Uncommons
+namespace DTD.Sort.Net.Algorithms
 {
     internal class PancakeSort<T> : ISort<T> where T : IComparable<T>
     {
+        public SortType Type => SortType.Pancake;
+
         public T[] Sort(T[] input, SortOrder sortOrder = SortOrder.Default)
         {
             

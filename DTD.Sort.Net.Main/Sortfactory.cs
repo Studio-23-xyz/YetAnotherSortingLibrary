@@ -1,38 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using DTD.Sort.Net.Enums;
+﻿using DTD.Sort.Net.Enums;
 using DTD.Sort.Net.Interfaces;
-using DTD.Sort.Net.Main.Uncommons;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using DTD.Sort.Net.Algorithms;
 
-
+[assembly: InternalsVisibleTo("DTD.Sort.Net.Tests")]
 namespace DTD.Sort.Net.Main
 {
-    internal class SortFactory<T> where T:IComparable<T>
+    internal class SortFactory<T> where T : IComparable<T>
     {
-        public readonly Dictionary<SortType, ISort<T>> SortLibrary;
+        public readonly List<ISort<T>> SortLibrary;
 
         public SortFactory()
         {
-            SortLibrary = new Dictionary<SortType, ISort<T>>
+            SortLibrary = new List<ISort<T>>();
+            Assembly algorithmAssembly = Assembly.Load("DTD.Sort.Net.Algorithms");
+       
+            Type[] algorithms = algorithmAssembly.GetTypes();
+            foreach (Type algorithm in algorithms)
             {
-                {SortType.Quick, new QuickSort<T>()},
-                {SortType.Bubble, new BubbleSort<T>()},
-                {SortType.Selection, new SelectionSort<T>()},
-                {SortType.Insertion, new InsertionSort<T>()},
-                {SortType.Merge, new MergeSort<T>()},
-                {SortType.Cocktail, new CocktailSort<T>()},
-                {SortType.Shell, new  ShellSort<T>()},
-                {SortType.Heap, new HeapSort<T>()},
-                {SortType.Genome,new GnomeSort<T>()},
-                {SortType.Pancake,new PancakeSort<T>()}
 
-
-            };
-
+                var genericType = algorithm.MakeGenericType(typeof(T));
+                var instance = algorithmAssembly.CreateInstance(genericType.FullName);
+                SortLibrary.Add((ISort<T>)instance);
+            }
 
         }
 
-        public ISort<T> GetSort(SortType type) => SortLibrary[type];
+        public ISort<T> GetSort(SortType type) => SortLibrary.First(r => r.Type == type);
 
     }
 }

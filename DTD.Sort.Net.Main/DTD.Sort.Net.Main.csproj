@@ -23,6 +23,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DTD.Sort.Net.Algorithms\DTD.Sort.Net.Algorithms.csproj" />
     <ProjectReference Include="..\DTD.Sort.Net.Enums\DTD.Sort.Net.Enums.csproj" />
     <ProjectReference Include="..\DTD.Sort.Net.Interfaces\DTD.Sort.Net.Interfaces.csproj" />
   </ItemGroup>
