@@ -1,7 +1,7 @@
-name: Feature Request
+name: New feature
 description: Request a new feature
 title: "[Feature]: "
-labels: [new feature]
+labels: [newfeature]
 assignees:
   - warhammer4000
 body:
