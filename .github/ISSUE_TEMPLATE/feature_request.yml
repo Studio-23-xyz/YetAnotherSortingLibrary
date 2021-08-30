@@ -1,24 +1,40 @@
 name: New Feature
-description: Request a New feature
+description: Request a new feature
 title: "[Feature]: "
-labels: [new Feature]
+labels: [newfeature]
 assignees:
   - warhammer4000
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out this form!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
   
-- type: textarea
+  - type: textarea
     id: what-happened
     attributes:
-      label: Describe the problem you want to solve
-      description: Also tell us, what did you expect to happen?
+      label: What problem do you wish to solve with this feature?
+      description: Please explain in details
     validations:
       required: true
-      
-  - type: checkboxes
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Proposed Solution
+      description: please tell us how would you solve it?
+    validations:
+      required: true
+ 
+ - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
