@@ -23,6 +23,7 @@ body:
     attributes:
       label: What problem do you wish to solve with this feature?
       description: Please explain in details
+      placeholder: ex. email@example.com
     validations:
       required: true
 
