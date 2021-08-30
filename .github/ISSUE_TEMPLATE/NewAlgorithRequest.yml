@@ -1,0 +1,20 @@
+name: New Algorithm
+description: File a new Algorithm Request
+title: "[Name of Algorithm]: "
+labels: [new feature]
+assignees:
+  - warhammer4000
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the new Request
+  - type: input
+    id: implementation
+    attributes:
+      label: Implementation Reference
+      description: Share a link where we can find implementation details
+      placeholder: https://rosettacode.org/wiki/Sorting_algorithms/Comb_sort#C.23
+    validations:
+      required: true
+
