@@ -1,7 +1,7 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: [bug]
+name: New Feature
+description: Request a New feature
+title: "[Feature]: "
+labels: [new Feature]
 assignees:
   - warhammer4000
 body:
