@@ -26,13 +26,6 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: logs
-    attributes:
-      label: Proposed Solution
-      description: please tell us how would you solve it?
-    validations:
-      required: true
  
  - type: checkboxes
     id: terms
