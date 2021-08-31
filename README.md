@@ -10,18 +10,18 @@ Just as the name suggests this is just another sorting library for .Net Core.
 Available Algorithms
 ================
 
-| Description             | Done | Comment |
-|-------------------------|------|---------|
-| Bubble Sort| ✔ | 
-| Insertion Sort| ✔ | 
-| Merge Sort| ✔ | Recursive
-| Quick Sort| ✔ | Recursive
-| Selection Sort| ✔ | 
-| Cocktail Sort| ✔ | 
-| Shell Sort| ✔ | 
-| Heap Sort| ✔ | 
-| Gnome Sort| ✔ | 
-| Pancake Sort| ✔ | 
+| Description             | Done | Comment | Description             | Done | Comment |
+|-------------------------|------|---------|-------------------------|------|---------|
+| Bubble Sort| ✔ |  |Cocktail Sort| ✔ | 
+| Insertion Sort| ✔ | |Shell Sort| ✔ |  
+| Merge Sort| ✔ | Recursive| Heap Sort| ✔ | 
+| Quick Sort| ✔ | Recursive| Gnome Sort| ✔ | 
+| Selection Sort| ✔ | |Pancake Sort| ✔ | 
+
+
+
+
+
 
 
 ## How to use
