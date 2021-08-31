@@ -14,7 +14,7 @@ namespace DTD.Sort.Net.Tests
 
 
         private static IEnumerable<ISort<Product>> TestAssistant =>
-            new SortFactory<Product>().SortLibrary;
+            new SortFactory<Product>().SortLibrary.Values;
 
 
         [SetUp]

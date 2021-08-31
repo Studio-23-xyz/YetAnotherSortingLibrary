@@ -12,11 +12,12 @@ namespace DTD.Sort.Net.Main
 {
     internal class SortFactory<T> where T : IComparable<T>
     {
-        public readonly List<ISort<T>> SortLibrary;
 
+        public readonly Dictionary<SortType,ISort<T>> SortLibrary;
         public SortFactory()
         {
-            SortLibrary = new List<ISort<T>>();
+
+            SortLibrary = new Dictionary<SortType, ISort<T>>();
             Assembly algorithmAssembly = Assembly.Load("DTD.Sort.Net.Algorithms");
        
             Type[] algorithms = algorithmAssembly.GetTypes();
@@ -24,13 +25,16 @@ namespace DTD.Sort.Net.Main
             {
 
                 var genericType = algorithm.MakeGenericType(typeof(T));
-                var instance = algorithmAssembly.CreateInstance(genericType.FullName);
-                SortLibrary.Add((ISort<T>)instance);
+                var instance = algorithmAssembly.CreateInstance(genericType.FullName!);
+                var iSortInstance = (ISort<T>) instance;
+
+                if (iSortInstance != null) SortLibrary[iSortInstance.Type] = iSortInstance;
             }
 
         }
 
-        public ISort<T> GetSort(SortType type) => SortLibrary.First(r => r.Type == type);
+       
+        public ISort<T> GetSort(SortType type) => SortLibrary[type];
 
     }
 }
