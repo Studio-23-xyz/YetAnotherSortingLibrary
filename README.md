@@ -2,9 +2,8 @@ Yet Another Sorting Library
 ================
 Just as the name suggests this is just another sorting library for .Net Core. 
 
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/Warhammer4000/YetAnotherSortingLibrary.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Warhammer4000/YetAnotherSortingLibrary/alerts/)
-[![Language grade: C#](https://img.shields.io/lgtm/grade/csharp/g/Warhammer4000/YetAnotherSortingLibrary.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Warhammer4000/YetAnotherSortingLibrary/context:csharp)
-
+[![Security Rating](http://20.188.121.167:9000/api/project_badges/measure?project=YASL&metric=security_rating&token=07b5e775b59803b6ea9e030cc7e82de04f79a651)](http://20.188.121.167:9000/dashboard?id=YASL)
+[![Technical Debt](http://20.188.121.167:9000/api/project_badges/measure?project=YASL&metric=sqale_index&token=07b5e775b59803b6ea9e030cc7e82de04f79a651)](http://20.188.121.167:9000/dashboard?id=YASL)
 
 
 Available Algorithms
