@@ -19,9 +19,17 @@ jobs:
     - name: Get Version from Tag
       id: get_version
       uses: battila7/get-version-action@v2
-    - name: Publish DTD.Sort.Net
-      uses: drusellers/publish-nuget@master
+    #- name: Publish DTD.Sort.Net
+    #  uses: drusellers/publish-nuget@master
+    #  with:
+    #      project-file-path: ./DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj
+    #      nuget-key: ${{secrets.NUGET_API_KEY}}
+    #      version: ${{ steps.get_version.outputs.version-without-v }}
+    - name: publish on version change
+      uses: rohith/publish-nuget@v2
       with:
-          project-file-path: ./DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj
-          nuget-key: ${{secrets.NUGET_API_KEY}}
-          version: ${{ steps.get_version.outputs.version-without-v }}
+          # Filepath of the project to be packaged, relative to root of repository
+          PROJECT_FILE_PATH: ./DTD.Sort.Net.Main/DTD.Sort.Net.Main.csproj
+          VERSION_STATIC: ${{ steps.get_version.outputs.version-without-v }}
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          PACKAGE_NAME: DTD.Sort.Net
