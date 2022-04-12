@@ -2,10 +2,9 @@
 using DTD.Sort.Net.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using DTD.Sort.Net.Algorithms;
+
 
 [assembly: InternalsVisibleTo("DTD.Sort.Net.Tests")]
 namespace DTD.Sort.Net.Main

@@ -20,7 +20,12 @@
     <PackageLicenseExpression></PackageLicenseExpression>
     <AssemblyName>DTD.Sort.Net.Main</AssemblyName>
     <RootNamespace>DTD.Sort.Net.Main</RootNamespace>
+    <CodeAnalysisRuleSet>..\.sonarlint\yaslcsharp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\.sonarlint\yasl\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DTD.Sort.Net.Algorithms\DTD.Sort.Net.Algorithms.csproj" />

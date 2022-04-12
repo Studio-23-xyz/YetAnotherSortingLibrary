@@ -1,0 +1,12 @@
+{
+  "ServerUri": "http://20.188.121.167:9000/",
+  "Organization": null,
+  "ProjectKey": "YASL",
+  "ProjectName": "YetAnotherSortingLibrary",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AX5snsQAXANxnO249Nof",
+      "ProfileTimestamp": "2022-01-18T09:57:31Z"
+    }
+  }
+}

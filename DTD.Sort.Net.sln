@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTD.Sort.Net.Main", "DTD.Sort.Net.Main\DTD.Sort.Net.Main.csproj", "{A6938710-3960-4B04-BF73-9FB5871AAF52}"
 EndProject
